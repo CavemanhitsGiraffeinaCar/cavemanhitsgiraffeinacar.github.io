@@ -1,7 +1,67 @@
+:root {
+    /*____ Color ____*/
+    --primary-color: #fff; /* Background */
+    --secondary-color: #011627; /* Text */
+    --tertiary-color: #FF3366; /* Highlights */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+h1, h2, a, p {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    text-transform: none;
+    font-color: var(--secondary-color);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+p {
+    font-weight: 400;
+}
+
+body {
     height: 100vh;
     margin: 0;
 }
@@ -10,4 +70,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* a hover animation */
+a:hover {
+    color: var(--secondary-color);
+    position: relative;
+}
+
+a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    animation: line-anim 0.5s forwards;
+}
+
+@keyframes line-anim {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
