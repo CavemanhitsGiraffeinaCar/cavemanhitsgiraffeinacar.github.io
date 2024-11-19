@@ -1,3 +1,4 @@
+// Game container
 document.addEventListener("DOMContentLoaded", () => {
     function loadGameContainer() {
         const isDesktop = !/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
@@ -17,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         iframe.allowFullscreen = true;
         gameContainer.appendChild(iframe);
     }
-
-    // Globale Funktion verfügbar machen
+    
     window.loadGameContainer = loadGameContainer;
 });
 
+// Scribble effect
 document.addEventListener("DOMContentLoaded", () => {
     const tiltedText = document.querySelectorAll('.tilted-text');
 
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         element.innerHTML = element.textContent
             .split('')
             .map(char => {
-                const randomTilt = Math.floor(Math.random() * 11) - 5; // Random between -5 and 5
+                const randomTilt = Math.floor(Math.random() * 11) - 5;
                 return char === ' '
                     ? `<span class="space">${char}</span>`
                     : `<span style="--tilt-angle: ${randomTilt};">${char}</span>`;
