@@ -46,6 +46,7 @@ h1, h2, a, p {
 
 h1 {
     font-weight: 700;
+    font-size: 2rem;
 }
 
 h2 {
@@ -55,6 +56,7 @@ h2 {
 a {
     font-weight: 400;
     text-decoration: none;
+    color: var(--secondary-color);
 }
 
 p {
@@ -64,12 +66,34 @@ p {
 body {
     height: 100vh;
     margin: 0;
-}
-
-#game-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+#gameContainer {
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure it takes up full width */
+    height: 100%; /* Ensure it takes up full height */
+    flex-direction: column; /* Align items in column */
+}
+
+iframe {
+    max-width: 100%; /* Optional, ensures iframe is responsive */
+    max-height: 100%; /* Optional */
+}
+
+#loadGameContainerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    color: var(--secondary-color);
 }
 
 header {
@@ -86,13 +110,13 @@ header div{
     gap: 1rem;
 }
 
-/* a hover animation */
-a:hover {
+/* aLine hover animation */
+a.aLine:hover {
     color: var(--secondary-color);
     position: relative;
 }
 
-a:hover::after {
+a.aLine:hover::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -111,4 +135,67 @@ a:hover::after {
     100% {
         width: 100%;
     }
+}
+
+/* button hover animation */
+
+.parentScribbleContainer{
+    margin-top: 2rem;
+}
+
+.button {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--secondary-color);
+}
+
+.button.scribble {
+    padding: 18px 20px 30px 33px;
+}
+
+.scribbleContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.scribbleContainer svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.scribbleContainer .scribblePath {
+    fill: none;
+    stroke: var(--tertiary-color);
+    stroke-width: 3;
+    stroke-dasharray: 2000px 2000px;
+    stroke-dashoffset: 400px;
+    transition: stroke .5s;
+}
+
+.scribbleContainer:hover .scribblePath {
+    stroke: var(--tertiary-color);
+    animation: dashoffset 3s linear forwards;
+}
+
+@keyframes dashoffset {
+    from {stroke-dashoffset: 400px;}
+    to {stroke-dashoffset: 4400px;}
 }

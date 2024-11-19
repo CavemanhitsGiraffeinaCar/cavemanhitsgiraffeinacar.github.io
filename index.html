@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="pqbSJc4Szt49aY6dvKZgvKxr91agzNwjysf0Y_Ldn0Y" />
+    <meta name="google-site-verification" content="pqbSJc4Szt49aY6dvKZgvKxr91agzNwjysf0Y_Ldn0Y"/>
     <title>Caveman hits Giraffe</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,18 +11,36 @@
 <header>
     <h1>Caveman hits Giraffe in a Car</h1>
     <div>
-        <a href="https://cavemanhitsgiraffeinacar.github.io/release-notes/">release notes</a>
-        <p><a href="https://martengierth.de/legal#imprint">imprint</a></p>
-    </div>
-</header>
-<main>
-    <div id="game-container">
-        <iframe src="https://cavemanhitsgiraffe.martengierth.de/game/" width="1280" height="960" frameborder="0"
-                allowfullscreen></iframe>
+        <a class="aLine" href="https://moinmarten.itch.io/caveman-hits-giraffe-in-a-car" target="_blank">itch.io</a>
+        <a class="aLine" href="https://cavemanhitsgiraffeinacar.github.io/release-notes/" target="_blank">release notes</a>
+        <p><a class="aLine" href="https://martengierth.de/legal#imprint" target="_blank">imprint</a></p>
     </div>
     <!--<div class="content">
      <iframe id="itch" frameborder="0" src="https://itch.io/embed/3036415" width="552" height="167"><a href="https://moinmarten.itch.io/caveman-hits-giraffe-in-a-car">Caveman hits Giraffe in a Car by Marten, Olleboll100, j0nesYes, karlkuhne</a></iframe>
     </div>-->
+</header>
+<main>
+    <!--<button id="loadGameContainerButton" onclick="loadGameContainer()">Start Game in Browser</button>-->
+    <div class="parentScribbleContainer">
+        <div class="scribbleContainer">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" viewBox="0 0 222.4 82.9"
+                 xml:space="preserve"><path class="scribblePath" d="M199,15.2C167.5,6.4,134.3,3.8,101.7,3c-24.9-0.6-49.5,0-73.2,8.4c-14,4.9-35.8,16.3-26,34.4c9.8,18,36.5,22.4,54.6,25.2 c24.9,3.9,50.4,5.4,75.6,6.5c26.4,1.2,60.6,0.7,77.8-23c6.1-8.4,10.5-20.1,6-30.2c-5.6-12.7-21.2-15.1-33.3-16.7 C148.7,3,114.1-0.1,79.3,2C66,2.7,52.3,4.2,39.7,8.6c-8.8,3.1-18,8.1-21.9,17C9.2,45.1,29.9,57.5,45,63.6 c22.9,9.3,48.3,13.5,72.7,16.9c16.5,2.3,33.4,3.4,50.1,1.4c13.8-1.6,28.8-5.3,40-13.9c7.9-6.1,13.9-15.5,14.5-25.5 c0.7-11.1-6.2-20.1-15.8-24.9c-12.4-6.2-27.2-6.8-40.6-8.4c-18.4-2.2-36.7-4.2-55.2-5.3c-17.6-1-35.4-2.3-53-2.7 C44.1,0.8,27,0.6,15.1,8.2c-9.4,6-9.2,16.9-4.8,26.1c4.9,10,13.2,16.1,23.1,20.7c23.2,10.8,50.1,15.7,75.3,19.4 c26.9,4,56.6,2.2,81.4-9.8c9.6-4.6,18.8-11.1,24.4-20.3c4.5-7.3,7.5-18,3.2-26c-5.9-11-20.5-14.8-31.8-16.3 c-18-2.4-36.4-0.7-54.6-0.9C112.5,1,93.7,0.5,75,0c-2.3-0.1-2.3,3.6,0,3.6"></path>
+  </svg>
+            <a class="button scribble" onclick="loadGameContainer()">Start Game</a>
+        </div>
+    </div>
+    <div id="gameContainer" style="display: none;">
+        <iframe src="https://cavemanhitsgiraffe.martengierth.de/game/" width="1280" height="960" frameborder="0"
+                allowfullscreen></iframe>
+    </div>
+
 </main>
 </body>
+<script>
+    function loadGameContainer() {
+        document.getElementById("gameContainer").style.display = "flex"; /* Changed to flex */
+        document.getElementsByClassName("scribbleContainer")[0].style.display = "none";
+    }
+</script>
 </html>
