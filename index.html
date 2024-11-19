@@ -39,6 +39,11 @@
 </body>
 <script>
     function loadGameContainer() {
+        const isDesktop = !/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+        if (!isDesktop) {
+            alert("Error: This game is only supported on desktop.");
+            return;
+        }
         document.getElementById("gameContainer").style.display = "flex"; /* Changed to flex */
         document.getElementsByClassName("scribbleContainer")[0].style.display = "none";
     }
