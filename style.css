@@ -217,7 +217,7 @@ a.aLine:hover::after {
 
 /* Add the wiggle animation on hover */
 .button:hover .tilted-text span {
-    animation: wiggle 0.5s infinite ease-in-out;
+    animation: wiggle 0.8s infinite ease-in-out;
 }
 @keyframes wiggle {
     0%, 100% {
