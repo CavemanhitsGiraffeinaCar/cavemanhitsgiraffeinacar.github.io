@@ -18,23 +18,26 @@ document.addEventListener("DOMContentLoaded", () => {
         iframe.allowFullscreen = true;
         gameContainer.appendChild(iframe);
     }
-    
+
     window.loadGameContainer = loadGameContainer;
-});
 
-// Scribble effect
-document.addEventListener("DOMContentLoaded", () => {
-    const tiltedText = document.querySelectorAll('.tilted-text');
+    // Scribble effect
+    const isDesktop = !/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    if (!isDesktop) {
+        return;
+    } else {
+        const tiltedText = document.querySelectorAll('.tilted-text');
 
-    tiltedText.forEach(element => {
-        element.innerHTML = element.textContent
-            .split('')
-            .map(char => {
-                const randomTilt = Math.floor(Math.random() * 11) - 5;
-                return char === ' '
-                    ? `<span class="space">${char}</span>`
-                    : `<span style="--tilt-angle: ${randomTilt};">${char}</span>`;
-            })
-            .join('');
-    });
+        tiltedText.forEach(element => {
+            element.innerHTML = element.textContent
+                .split('')
+                .map(char => {
+                    const randomTilt = Math.floor(Math.random() * 11) - 5;
+                    return char === ' '
+                        ? `<span class="space">${char}</span>`
+                        : `<span style="--tilt-angle: ${randomTilt};">${char}</span>`;
+                })
+                .join('');
+        });
+    }
 });
