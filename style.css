@@ -20,7 +20,7 @@
     /*____ Color ____*/
     --primary-color: #fff; /* Background */
     --secondary-color: #011627; /* Text */
-    --tertiary-color: #FF3366; /* Highlights */
+    --tertiary-color: #ea0000; /* Highlights */
 }
 
 * {
@@ -144,7 +144,7 @@ header div {
 
 /* aLine hover animation */
 a.aLine:hover {
-    color: var(--secondary-color);
+    color: var( --tertiary-color);
     position: relative;
 }
 
@@ -155,7 +155,7 @@ a.aLine:hover::after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: var( --tertiary-color);
     animation: line-anim 0.5s forwards;
 }
 
