@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const gameContainer = document.getElementById("gameContainer");
         gameContainer.style.display = "flex";
         document.getElementsByClassName("scribbleContainer")[0].style.display = "none";
+        document.getElementById("Banner").style.display = "none";
 
         const iframe = document.createElement("iframe");
         iframe.src = "https://cavemanhitsgiraffe.martengierth.de/game/";

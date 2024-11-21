@@ -130,6 +130,18 @@ header div {
     gap: 1rem;
 }
 
+#Banner {
+    display: block;
+    width: auto;
+    height: 13rem;
+}
+
+#Banner img, #Banner source {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* skaliert das Bild, um den Container zu füllen */
+}
+
 /* aLine hover animation */
 a.aLine:hover {
     color: var(--secondary-color);
