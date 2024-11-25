@@ -34,6 +34,7 @@
 html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -84,7 +85,7 @@ p {
 }
 
 body {
-    height: 100vh;
+    min-height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
