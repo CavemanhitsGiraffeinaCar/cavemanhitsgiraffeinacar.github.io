@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("Banner").style.display = "none";
 
         const iframe = document.createElement("iframe");
-        iframe.src = "https://html-classic.itch.zone/html/12306266/Caveman hits Giraffe in a Car/index.html";
+        iframe.src = "https://html-classic.itch.zone/html/13067339/web/index.html";
         iframe.width = "1280";
         iframe.height = "960";
         iframe.frameBorder = "0";
